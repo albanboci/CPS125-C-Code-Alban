@@ -14,19 +14,11 @@ int main (void)
 		
 	bus=(double)ppl/16;
 	
-	if(floor(bus)==bus)
-	{
-		printf("\n%.0lf shuttlebuses are needed\nThere are no extra people.", bus);
-	}
+	bus=ceil(bus);
+	printf("\n%.0lf busses are needed\n", bus);
+	extra=((ceil(bus)*16)-ppl);
+	printf("There are %.0lf empty seats on the last bus", extra);
 	
-	else
-	{
-		bus=ceil(bus);
-		printf("\n%.0lf busses are needed\n", bus);
-		extra=((ceil(bus)*16)-ppl);
-		printf("There are %.0lf empty seats on the last bus", extra);
-	}
-
 	return(0);
 }
 
