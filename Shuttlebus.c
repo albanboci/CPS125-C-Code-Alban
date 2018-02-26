@@ -10,7 +10,7 @@ int main (void)
 	printf("Enter how many people will be taking a shuttlebus:\n");
 	scanf("%d", &ppl);
 	}
-	while(ppl<0)
+	while(ppl<0);
 		
 	bus=(double)ppl/16;
 	
