@@ -5,9 +5,13 @@ int main (void)
 	int ppl;
 	double bus, extra;
 	
+	do
+	{
 	printf("Enter how many people will be taking a shuttlebus:\n");
 	scanf("%d", &ppl);
-
+	}
+	while(ppl<0)
+		
 	bus=(double)ppl/16;
 	
 	if(floor(bus)==bus)
@@ -19,7 +23,7 @@ int main (void)
 	{
 		bus=ceil(bus);
 		printf("\n%.0lf busses are needed\n", bus);
-		extra=(ppl-(floor(bus)*16)+16);
+		extra=((ceil(bus)*16)-ppl);
 		printf("There are %.0lf out of 16 people in the last bus", extra);
 	}
 
