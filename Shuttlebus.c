@@ -24,7 +24,7 @@ int main (void)
 		bus=ceil(bus);
 		printf("\n%.0lf busses are needed\n", bus);
 		extra=((ceil(bus)*16)-ppl);
-		printf("There are %.0lf out of 16 people in the last bus", extra);
+		printf("There are %.0lf empty seats on the last bus", extra);
 	}
 
 	return(0);
